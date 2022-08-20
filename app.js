@@ -29,6 +29,18 @@ var pointsBox = document.createElement("div");// create points div (start div's 
 pointsBox.setAttribute("id" , "points");
 startDiv.appendChild(pointsBox);
 
+var scoreDiv = document.createElement("div");// create score div (points div's 1st child)
+scoreDiv.setAttribute("id", "scores");
+scoreDiv.appendChild(document.createTextNode("Your Score : ")); // text of score
+var scoreUpdate = document.createElement("span"); // child span
+scoreUpdate.setAttribute("id" , "score-update");
+scoreDiv.appendChild(scoreUpdate);
+pointsBox.appendChild(scoreDiv);
+
+var livesDiv = document.createElement("div");
+livesDiv.setAttribute("id", "lives");
+livesDiv.appendChild(document.createTextNode("lives: "))
+pointsBox.appendChild(livesDiv);
 
 
 /*
