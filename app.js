@@ -39,8 +39,15 @@ pointsBox.appendChild(scoreDiv);
 
 var livesDiv = document.createElement("div");
 livesDiv.setAttribute("id", "lives");
-livesDiv.appendChild(document.createTextNode("lives: "))
-livesDiv.appendChild(document.createElement("div"))
+livesDiv.appendChild(document.createTextNode("lives: "));
+var liveCount = 0;
+for(var i=0; i<=4; i++) {
+    liveCount++;
+    var live = document.createElement("div");
+    live.setAttribute("class","live");
+    live.setAttribute("id",liveCount);
+    livesDiv.appendChild(live)
+}
 pointsBox.appendChild(livesDiv);
 
 
