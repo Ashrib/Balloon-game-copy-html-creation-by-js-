@@ -37,11 +37,11 @@ scoreUpdate.setAttribute("id" , "score-update");
 scoreDiv.appendChild(scoreUpdate);
 pointsBox.appendChild(scoreDiv);
 
-var livesDiv = document.createElement("div");
+var livesDiv = document.createElement("div");// create lives div (points div's 2nd child)
 livesDiv.setAttribute("id", "lives");
 livesDiv.appendChild(document.createTextNode("lives: "));
 var liveCount = 0;
-for(var i=0; i<=4; i++) {
+for(var i=0; i<=4; i++) {  // creating 5 live hearts by loop
     liveCount++;
     var live = document.createElement("div");
     live.setAttribute("class","live");
