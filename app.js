@@ -1,3 +1,4 @@
+                // --------creating  html-----------
 var getBody = document.getElementById("body");
 var gameOverDiv = document.createElement("div"); // create game over div (body's 1st child)
 gameOverDiv.setAttribute("id" , "game-over");
@@ -50,8 +51,22 @@ for(var i=0; i<=4; i++) {  // creating 5 live hearts by loop
 }
 pointsBox.appendChild(livesDiv);
 
+var balloonsContainer = document.createElement("div"); // create balloon-box div (container's 3rd child)
+balloonsContainer.setAttribute("id", "balloon-box");
+containerDiv.appendChild(balloonsContainer);
 
-/*
+var balloonsCount = 0;
+for(var a=0; a<=26; a++) { // creating 27 balloons with loop
+    balloonsCount++;
+    var createBalloon = document.createElement("div");
+    createBalloon.setAttribute("class", "balloon");
+    createBalloon.setAttribute("onClick","matchBalloon(id)");
+    createBalloon.setAttribute("id","balloon-"+balloonsCount);
+    balloonsContainer.appendChild(createBalloon)
+};
+                    // ---------html ends---------
+
+                    
 // Filling random colors in balloons
 var colors = ["#84cc16", "#22c55e","#ef4444", "#fde047", "#8b5cf6", "#ec4899", "#fb923c"];
 var ids = ["balloon-1","balloon-2", "balloon-3", "balloon-4", "balloon-5", "balloon-6", "balloon-7","balloon-8", "balloon-9", "balloon-10", "balloon-11", "balloon-12", "balloon-13", "balloon-14","balloon-15", "balloon-16", "balloon-17", "balloon-18", "balloon-19", "balloon-20","balloon-21", "balloon-22", "balloon-23", "balloon-24", "balloon-25", "balloon-26", "balloon-27"];
@@ -93,7 +108,6 @@ function matchBalloon(v) {
     }
     else{
         ++wrongScore;
-        //wrongAlert();
         for(var i = 0; i < wrongScore; i++) { // game lives
             document.getElementById(wrongScore).style.display = "none";
         }; 
@@ -103,4 +117,3 @@ function matchBalloon(v) {
         document.getElementById("game-over").style.display = "flex";
     };
 };
-*/
